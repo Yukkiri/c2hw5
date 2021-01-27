@@ -4,13 +4,13 @@ import java.util.HashMap;
 
 public class Main {
     static final int size = 10000000;
-    static int parts = 1;
-    static int remainder = size%parts;
+    static int parts = 5;
+    static final int remainder = size%parts;
     static final int h = size / parts;
 
     public static void main(String[] args) {
         firstMethod();
-        secondMethod(remainder);
+        secondMethod();
     }
 
     static void firstMethod(){
@@ -28,7 +28,7 @@ public class Main {
 
     }
 
-    static void secondMethod(int remainder){
+    static void secondMethod(){
         if (parts == 1) {
             firstMethod();
             return;
@@ -99,7 +99,11 @@ public class Main {
 
 //        System.arraycopy(arr1, 0, arr, 0, h);
 //        System.arraycopy(arr2, 0, arr, h, h);
+
+        //!!!! ЕСЛИ ЧТО-ТО ПОЙДЕТ НЕ ТАК: так как вы сказали, что домашнее задание не связано с синхронизацией, то иногда может выводить изначальное значение
+        //¯＼_(ツ)_/¯
         System.out.println(System.currentTimeMillis() - a);
-        System.out.println(arr[size/2]);
+        float i = arr[size/2];
+        System.out.println(i);
     }
 }
